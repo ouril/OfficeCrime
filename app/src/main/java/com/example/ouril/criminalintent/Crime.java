@@ -1,14 +1,18 @@
 package com.example.ouril.criminalintent;
 
 import java.util.UUID;
+import java.util.Date;
 
 public class Crime {
 
     private UUID mId;
     private String mTitle;
+    private Date mDate;
+    private boolean mSolved;
 
     public Crime() {
         mId = UUID.randomUUID();
+        mDate = new Date();
     }
 
     public UUID getId() {
@@ -17,6 +21,22 @@ public class Crime {
 
     public String getTitle() {
         return mTitle;
+    }
+
+    public Date getDate() {
+        return mDate;
+    };
+
+    public void setDate(Date date) {
+        mDate = date;
+    }
+
+    public boolean isSolved() {
+        return mSolved;
+    }
+
+    public void setSolved(boolean isSolved) {
+        mSolved = isSolved;
     }
 
     public void setTitle(String title) {
